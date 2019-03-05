@@ -21,6 +21,7 @@
       ></script>
       <script src="https://code.highcharts.com/highcharts.js"></script>
       <script src="https://code.highcharts.com/modules/exporting.js"></script>
+      <script src="https://code.highcharts.com/modules/export-data.js"></script>
       <div id="container" class="chart_wrap">
         <script type="text/javascript">
           Highcharts.chart("container", {
@@ -68,7 +69,7 @@
           });
         </script>
       </div>
-      <br>
+      <br />
       <div id="container2" class="chart_wrap">
         <script type="text/javascript">
           Highcharts.chart("container2", {
@@ -78,15 +79,11 @@
               height: 350
             },
             title: {
-              text: "Вы, как правило, слушаете или нет новогоднее телеобращение президента?"
+              text:
+                "Вы, как правило, слушаете или нет новогоднее телеобращение президента?"
             },
             xAxis: {
-              categories: [
-                "2015",
-                "2016",
-                "2017",
-                "2018"
-              ]
+              categories: ["2015", "2016", "2017", "2018"]
             },
             yAxis: {
               title: {
@@ -114,49 +111,70 @@
           });
         </script>
       </div>
-      <br>
+      <br />
       <div id="container3" class="chart_wrap">
         <script type="text/javascript">
           Highcharts.chart("container3", {
             chart: {
-            renderTo: 'chart_2',
-            plotBackgroundColor: null,
-            plotBorderWidth: null,
-            plotShadow: false,
-            height: 350,
-        },
-        title: {
-            text: 'Где территориально Вы будете встречать Новый год сейчас?'
-        },
-        tooltip: {
-            pointFormat: '{point.percentage:.1f} %',
-        },
-        plotOptions: {
-            pie: {
+              renderTo: "chart_2",
+              plotBackgroundColor: null,
+              plotBorderWidth: null,
+              plotShadow: false,
+              height: 350
+            },
+            title: {
+              text: 'Где территориально Вы будете встречать Новый год сейчас?'
+            },
+            tooltip: {
+              pointFormat: '{point.percentage:.1f} %'
+            },
+            plotOptions: {
+              pie: {
                 allowPointSelect: true,
-                cursor: 'pointer',
                 dataLabels: {
-                    enabled: false
+                enabled: false
                 },
                 showInLegend: true
-            }
-        },
-         series: [{
-         type: 'pie',
-            name: 'Новый 2019 год',
-            data: [
-                ['В Санкт-Петербурге', 78],
-                ['В Ленинградской области', 7],
-                ['В другом регионе России', 5],
-                ['За границей', 3],
-                ['Пока не решили', 7],
-                ['Не хочу отвечать', 0.4],
+              }
+            },
+            series: [
+              {
+                type: 'pie',
+                colorByPoint: true,
+                data: [
+                  {
+                    name: 'В Санкт-Петербурге',
+                    y: 78.3,
+                    sliced: true,
+                    selected: true
+                  },
+                  {
+                    name: 'В Ленинградской области',
+                    y: 7.0
+                  },
+                  {
+                    name: 'В другом регионе России',
+                    y: 4.5
+                  },
+                  {
+                    name: 'За границей',
+                    y: 2.8
+                  },
+                  {
+                    name: 'Пока не решили',
+                    y: 7.1
+                  },
+                  {
+                    name: 'Не хочу отвечать',
+                    y: 0.4
+                  }
+                ]
+              }
             ]
-         }]
           });
         </script>
       </div>
-      <br>
+      <br />
     </article>
   </body>
 </html>
