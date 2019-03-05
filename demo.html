@@ -1,68 +1,164 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="utf-8">
+  <head>
+    <meta charset="utf-8" />
     <title>Платонов</title>
-</head>
-<style>
-  body {
-   background-image: url(first_bg.jpg);
-   font-family: sans-serif;
-   color: red;
-   font-size: 2em;
-}
-
-</style>
-<body>
-<article class="article">
-    <br>
-    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
-    <script src="https://code.highcharts.com/highcharts.js"></script>
-    <script src="https://code.highcharts.com/modules/exporting.js"></script>
-    <div id="container" class="chart_wrap">
+  </head>
+  <style>
+    body {
+      background-image: url(first_bg.jpg);
+      font-family: sans-serif;
+      color: red;
+      font-size: 2em;
+    }
+  </style>
+  <body>
+    <article class="article">
+      <br />
+      <script
+        type="text/javascript"
+        src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"
+      ></script>
+      <script src="https://code.highcharts.com/highcharts.js"></script>
+      <script src="https://code.highcharts.com/modules/exporting.js"></script>
+      <div id="container" class="chart_wrap">
         <script type="text/javascript">
-        Highcharts.chart('container', {
-        title: {
-            text: 'Solar Employment Growth by Sector, 2010-2016'
-        },
-        subtitle: {
-            text: 'Source: thesolarfoundation.com'
-        },
-        yAxis: {
+          Highcharts.chart("container", {
             title: {
-                text: 'Number of Employees'
-            }
+              text:
+                'Говорят, "как Новый год встретишь, так его и проведёшь". Верите ли Вы в эту примету?'
+            },
+            subtitle: {
+              text: "ответы респондентов"
+            },
+            yAxis: {
+              title: {
+                text: "%"
+              }
+            },
+            legend: {
+              layout: "vertical",
+              align: "right",
+              verticalAlign: "middle"
+            },
+            xAxis: {
+              categories: ["2015", "2016", "2017", "2018"]
+            },
+            plotOptions: {
+              series: {
+                dataLabels: {
+                  enabled: true
+                }
+              }
+            },
+            series: [
+              {
+                name: "Верю",
+                data: [34.8, 34.0, 31.2, 30.9]
+              },
+              {
+                name: "Не верю",
+                data: [58.9, 59.3, 62.6, 60.8]
+              },
+              {
+                name: "Затрудняюсь ответить",
+                data: [6.3, 6.7, 6.2, 8.3]
+              }
+            ]
+          });
+        </script>
+      </div>
+      <br>
+      <div id="container2" class="chart_wrap">
+        <script type="text/javascript">
+          Highcharts.chart("container2", {
+            chart: {
+              renderTo: "chart_1",
+              type: "column",
+              height: 350
+            },
+            title: {
+              text: "Вы, как правило, слушаете или нет новогоднее телеобращение президента?"
+            },
+            xAxis: {
+              categories: [
+                "2015",
+                "2016",
+                "2017",
+                "2018"
+              ]
+            },
+            yAxis: {
+              title: {
+                text: "%"
+              }
+            },
+            series: [
+              {
+                name: "Как правило, слушаю внимательно",
+                data: [67.6, 63.4, 63.2, 60.3]
+              },
+              {
+                name: "Как правило, слушаю, но в содержание не вникаю",
+                data: [19.3, 25.1, 27.3, 27.0]
+              },
+              {
+                name: "Как правило, не слушаю",
+                data: [8.9, 10.1, 8.2, 11.2]
+              },
+              {
+                name: "Трудно сказать/по-разному",
+                data: [4.2, 1.4, 1.2, 1.6]
+              }
+            ]
+          });
+        </script>
+      </div>
+      <br>
+      <div id="container3" class="chart_wrap">
+        <script type="text/javascript">
+          Highcharts.chart("container3", {
+            chart: {
+            renderTo: 'chart_2',
+            plotBackgroundColor: null,
+            plotBorderWidth: null,
+            plotShadow: false,
+            height: 350,
         },
-        legend: {
-            layout: 'vertical',
-            align: 'right',
-            verticalAlign: 'middle'
+        title: {
+            text: 'Где территориально Вы будете встречать Новый год сейчас?'
+        },
+        tooltip: {
+            pointFormat: '<b>{point.percentage}%</b>',
+            percentageDecimals: 1
         },
         plotOptions: {
-            series: {
-                pointStart: 2010
+            pie: {
+                allowPointSelect: true,
+                cursor: 'pointer',
+                dataLabels: {
+                    enabled: false
+                },
+                showInLegend: true
             }
         },
-        series: [{
-            name: 'Installation',
-            data: [43934, 52503, 57177, 69658, 97031, 119931, 137133, 154175]
-        }, {
-            name: 'Manufacturing',
-            data: [24916, 24064, 29742, 29851, 32490, 30282, 38121, 40434]
-        }, {
-            name: 'Sales & Distribution',
-            data: [11744, 17722, 16005, 19771, 20185, 24377, 32147, 39387]
-        }, {
-            name: 'Project Development',
-            data: [null, null, 7988, 12169, 15112, 22452, 34400, 34227]
-        }, {
-            name: 'Other',
-            data: [12908, 5948, 8105, 11248, 8989, 11816, 18274, 18111]
-        }]
-    });  
+         series: [{
+         type: 'pie',
+            name: 'Новый 2019 год',
+            data: [
+                ['В Санкт-Петербурге', 78],
+                ['В Ленинградской области', 7],
+                ['В другом регионе России', 5],
+                ['За границей', 3],
+                ['Пока не решили', 7],
+                ['Не хочу отвечать', 0.4],
+            ]
+         }]
+          });
         </script>
-    </div>
-</article>
-</body>
+      </div>
+      <br>
+    </article>
+  </body>
 </html>
-<br><br><br>
+<br /><br /><br />
