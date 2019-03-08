@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700,900&subset=cyrillic");
-@import url('https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=cyrillic');
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=cyrillic");
 
 @keyframes header_anim {
   from {
@@ -10,23 +10,52 @@
   }
 }
 
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes animated_color {
+  0% {
+      background-color: #FFEE73
+  }
+  25% {
+      background-color: #63DB93
+  }
+  50% {
+      background-color: #FF8E73
+  }
+  75% {
+      background-color: #926CD6
+  }
+100% {
+      background-color: #FF8E73
+  }
+}
+
 body {
   margin: 0;
   padding: 0;
+  height: 100%;
+  animation: animated_color 12s infinite;
 }
 
 h2 {
   position: relative;
   font-family: "Montserrat", sans-serif;
-  font-size: 4em;
+  font-size: 3em;
   font-weight: 700;
 }
 
 p {
   display: block;
-  margin-top: -1em;
+  margin-top: -40px;
   position: top;
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 2em;
   font-weight: 700;
 }
@@ -47,35 +76,37 @@ p {
   padding: 0 50px;
 }
 
-.main{
-  margin:0 auto;
-  width:100%;
-  max-width:1700px;
+.main {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1700px;
 }
 
 .inline div {
-  display:inline-block;
+  display: inline-block;
   display: -moz-inline-stack;
-  vertical-align:top;
-  font-size:22px;
+  vertical-align: top;
+  font-size: 22px;
 }
 
-div.inline {font-size:0;}
+div.inline {
+  font-size: 0;
+}
 
-.work, 
-.face, 
+.work,
+.face,
 .projects {
-  height:300px;
-  width:33%
+  height: 300px;
+  width: 33%;
 }
 
-div.face{
+div.face {
   text-align: center;
 }
 
 div.face img {
-  max-width:90%;
-  margin: 10px 60px 60px 10px;
+  max-width: 70%;
+  margin: 10px 60px 80px 10px;
 }
 
 .black {
@@ -87,11 +118,24 @@ div.face img {
 }
 
 .normal {
-  font-family: 'Open Sans', sans-serif;
+  font-family: "Open Sans", sans-serif;
   font-size: 1em;
   font-weight: 400i;
+  margin-top: -30px;
 }
 
-.iframe title <
-font-family: 'Open Sans', sans-serif;
->
+.iframe title {
+  font-family: "Open Sans", sans-serif;
+}
+
+.anim-show {
+  opacity: 0;
+  transition: 1s;
+  animation: show 2s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+a {
+  color: slategray;
+}
