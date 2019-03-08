@@ -1,13 +1,19 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:700,900&subset=cyrillic");
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=cyrillic");
 
-/* Variables */
-/* Fonts */
-/* Mixins */
-/* Base Styles */
+@keyframes show {
+	0% {
+	  opacity: 0;
+	}
+	100% {
+	  opacity: 1;
+	}
+  }
+
  * {
 	 box-sizing: border-box;
 }
+
  html, body {
 	 color: #999;
 	 font-family: Helvetica, Arial, sans-serif;
@@ -28,7 +34,7 @@
 	 text-align: center;
 }
  header:before {
-	 background: linear-gradient(rgba(140, 129, 235, 0.7), rgba(73, 78, 143, 0.7)), url("second_bg.jpg");
+	 background: linear-gradient(rgba(107, 94, 69, 0.6), rgba(73, 78, 143, 0.3)), url("second_bg.jpg");
 	 background-color: #ccc;
 	 background-attachment: fixed;
 	 background-position: center center;
@@ -47,9 +53,9 @@
 }
  @keyframes bgFadeIn {
 	 0% {
-		 background-color: rgb(216, 199, 199);
+		 background-color: rgb(255, 255, 255, 1);
 	}
-	 100% {
+	 90% {
 		 background-color: rgba(255, 255, 255, 0);
 	}
 }
@@ -67,7 +73,7 @@
  header h3 {
 	 color: #fff0a5;
 	 font-family: "Open Sans";
-	 font-size: 3.75rem;
+	 font-size: 3.5rem;
 	 font-weight: 300;
 	 margin: 0;
 }
@@ -89,3 +95,11 @@
 	 line-height: 0.1;
 	 top: -0.2em;
 }
+
+.anim-show {
+	opacity: 0;
+	transition: 1s;
+	animation: show 2s 1;
+	animation-fill-mode: forwards;
+	animation-delay: 0s;
+  }
