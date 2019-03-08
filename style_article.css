@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css?family=Montserrat:700,900&subset=cyrillic");
+@import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=cyrillic");
+
+/* Variables */
+/* Fonts */
+/* Mixins */
+/* Base Styles */
+ * {
+	 box-sizing: border-box;
+}
+ html, body {
+	 color: #999;
+	 font-family: Helvetica, Arial, sans-serif;
+	 font-size: 10px;
+	 font-weight: 100;
+	 margin: 0;
+	 padding: 0;
+}
+ .container {
+	 margin: 0 auto;
+	 max-width: 750px;
+	 padding: 0 24px;
+}
+ header {
+	 animation: bgFadeIn 1s ease-in both;
+	 position: relative;
+	 padding: 28px;
+	 text-align: center;
+}
+ header:before {
+	 background: linear-gradient(rgba(140, 129, 235, 0.7), rgba(73, 78, 143, 0.7)), url("second_bg.jpg");
+	 background-color: #ccc;
+	 background-attachment: fixed;
+	 background-position: center center;
+	 background-repeat: no-repeat;
+	 -webkit-background-size: cover;
+	 -moz-background-size: cover;
+	 -o-background-size: cover;
+	 background-size: cover;
+	 bottom: 0;
+	 content: ' ';
+	 left: 0;
+	 position: absolute;
+	 right: 0;
+	 top: 0;
+	 z-index: -1;
+}
+ @keyframes bgFadeIn {
+	 0% {
+		 background-color: rgb(216, 199, 199);
+	}
+	 100% {
+		 background-color: rgba(255, 255, 255, 0);
+	}
+}
+ header .container {
+	 margin: 12rem auto;
+}
+ header h1 {
+	 border-bottom: 2px solid #fff;
+	 border-top: 2px solid #fff;
+	 color: #fff;
+	 font-family: "Montserrat";
+	 font-size: 6rem;
+	 margin: 0;
+}
+ header h3 {
+	 color: #fff0a5;
+	 font-family: "Open Sans";
+	 font-size: 3.75rem;
+	 font-weight: 300;
+	 margin: 0;
+}
+ section {
+	 padding: 2rem;
+}
+ section p {
+	 font-size: 2.5rem;
+	 line-height: 3.5rem;
+}
+ section p.lead-in {
+	 font-size: 3rem;
+}
+ section p.lead-in:first-letter {
+	 font-size: 7.25rem;
+	 display: block;
+	 float: left;
+	 position: relative;
+	 line-height: 0.1;
+	 top: -0.2em;
+}
