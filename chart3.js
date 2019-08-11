@@ -1,29 +1,30 @@
 var ctx = document.getElementById("myChart3").getContext("2d");
 var chart = new Chart(ctx, {
-  // The type of chart we want to create
-  type: "bar",
-
-  // The data for our dataset
+  type: "horizontalBar",
   data: {
-    labels: ["January", "February", "March", "April", "May", "June", "July"],
+    labels: ["Да, таких большинство",
+    "Да, один или несколько человек",
+    "Таких нет", "Затр.отв."],
     datasets: [
       {
-        label: "My First dataset",
-        backgroundColor: "rgb(255, 99, 132)",
-        borderColor: "rgb(255, 99, 132)",
-        data: [0, 10, 5, 2, 20, 30, 45]
+        label: "Низкий ПП",
+        backgroundColor: "rgb(0, 102, 96)",
+        data: [36, 226, 390, 238]
+      },
+      {
+        label: "Высокий ПП",
+        backgroundColor: "rgb(190, 81, 100)",
+        data: [40, 129, 99, 91]
       }
     ]
   },
-
-  // Configuration options go here
   options: {
     title: {
       display: true,
       position: "top",
       fontSize: 14,
       text:
-        "Говорят, что «как Новый год встретишь — так его и проведешь». Верите ли вы в эту примету?"
+        "Среди Ваших сокурсников есть те,\nкто принимал участие в протестных акциях?"
     }
   }
 });
