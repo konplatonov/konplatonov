@@ -2,104 +2,103 @@
 @import url("https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,700,700i&subset=cyrillic");
 
 @keyframes show {
-	0% {
-	  opacity: 0;
-	}
-	100% {
-	  opacity: 1;
-	}
+  0% {
+    opacity: 0;
   }
-
- * {
-	 box-sizing: border-box;
+  100% {
+    opacity: 1;
+  }
 }
 
- html, body {
-	 color: #999;
-	 font-family: Helvetica, Arial, sans-serif;
-	 font-size: 10px;
-	 font-weight: 100;
-	 margin: 0;
-	 padding: 0;
+* {
+  box-sizing: border-box;
 }
- .container {
-	 margin: 0 auto;
-	 max-width: 800px;
-	 padding: 0 24px;
+
+html,
+body {
+  color: #999;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 10px;
+  font-weight: 100;
+  margin: 0;
+  padding: 0;
 }
- header {
-	 animation: bgFadeIn 1s ease-in both;
-	 position: relative;
-	 padding: 28px;
-	 text-align: center;
+.container {
+  margin: 0 auto;
+  max-width: 800px;
+  padding: 0 24px;
 }
- header:before {
-	 background: linear-gradient(rgba(107, 94, 69, 0.6), rgba(73, 78, 143, 0.3)), url("second_bg.jpg");
-	 background-color: #ccc;
-	 background-attachment: fixed;
-	 background-position: center center;
-	 background-repeat: no-repeat;
-	 -webkit-background-size: cover;
-	 -moz-background-size: cover;
-	 -o-background-size: cover;
-	 background-size: cover;
-	 bottom: 0;
-	 content: ' ';
-	 left: 0;
-	 position: absolute;
-	 right: 0;
-	 top: 0;
-	 z-index: -1;
+header {
+  animation: bgFadeIn 1s ease-in both;
+  position: relative;
+  padding: 28px;
+  text-align: center;
 }
- @keyframes bgFadeIn {
-	 0% {
-		 background-color: rgb(255, 255, 255, 1);
-	}
-	 90% {
-		 background-color: rgba(255, 255, 255, 0);
-	}
+header:before {
+  background: linear-gradient(rgba(107, 94, 69, 0.6), rgba(73, 78, 143, 0.3)),
+    url("second_bg.jpg");
+  background-color: #ccc;
+  background-attachment: fixed;
+  background-position: center center;
+  background-repeat: no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  bottom: 0;
+  content: " ";
+  left: 0;
+  position: absolute;
+  right: 0;
+  top: 0;
+  z-index: -1;
 }
- header .container {
-	 margin: 12rem auto;
+@keyframes bgFadeIn {
+  0% {
+    background-color: rgb(255, 255, 255, 1);
+  }
+  90% {
+    background-color: rgba(255, 255, 255, 0);
+  }
 }
- header h1 {
-	 border-bottom: 2px solid #fff;
-	 border-top: 2px solid #fff;
-	 color: #fff;
-	 font-family: "Montserrat";
-	 font-size: 6rem;
-	 margin: 0;
+header .container {
+  margin: 12rem auto;
 }
- header h3 {
-	 color: #fff0a5;
-	 font-family: "Open Sans";
-	 font-size: 3.5rem;
-	 font-weight: 300;
-	 margin: 0;
+header h1 {
+  border-bottom: 2px solid #fff;
+  border-top: 2px solid #fff;
+  color: #fff;
+  font-family: "Montserrat";
+  font-size: 6rem;
+  margin: 0;
 }
- section {
-	 padding: 2rem;
+header h3 {
+  color: #fff0a5;
+  font-family: "Open Sans";
+  font-size: 3.5rem;
+  font-weight: 300;
+  margin: 0;
 }
- section p {
-	 font-size: 2.5rem;
-	 line-height: 3.5rem;
+
+section {
+  padding: 2rem;
 }
- section p.lead-in {
-	 font-size: 3rem;
+
+section p {
+  font-size: 2.5rem;
+  line-height: 3.5rem;
 }
- section p.lead-in:first-letter {
-	 font-size: 7.25rem;
-	 display: block;
-	 float: left;
-	 position: relative;
-	 line-height: 0.1;
-	 top: -0.2em;
+
+section p.lead-in {
+  font-size: 3rem;
 }
 
 .anim-show {
-	opacity: 0;
-	transition: 1s;
-	animation: show 2s 1;
-	animation-fill-mode: forwards;
-	animation-delay: 0s;
-  }
+  opacity: 0;
+  transition: 1s;
+  animation: show 2s 1;
+  animation-fill-mode: forwards;
+  animation-delay: 0s;
+}
+
+a:link {font-size:16px; color:rgb(163, 113, 113)}
