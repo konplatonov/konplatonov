@@ -25,7 +25,7 @@ var chart = new Chart(ctx, {
       display: true,
       position: "top",
       fontSize: 14,
-      text: "Вы интересуетесь политикой в целом?"
+      text: "Вы интересуетесь политикой в целом? % респондентов"
     }
   }
 });
