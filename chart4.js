@@ -1,3 +1,5 @@
+Chart.defaults.global.defaultFontColor = 'black';
+Chart.defaults.global.defaultFontSize = 15;
 var ctx = document.getElementById("myChart4").getContext("2d");
 var chart = new Chart(ctx, {
   // The type of chart we want to create
