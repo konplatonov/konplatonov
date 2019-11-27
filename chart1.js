@@ -1,5 +1,5 @@
 Chart.defaults.global.defaultFontColor = 'black';
-Chart.defaults.global.defaultFontSize = 15;
+Chart.defaults.global.defaultFontSize = 16;
 var ctx = document.getElementById("myChart1").getContext("2d");
 var chart = new Chart(ctx, {
   // The type of chart we want to create
@@ -11,7 +11,7 @@ var chart = new Chart(ctx, {
      "Готов заниматься политической агитацией",
       "Готов написать жалобу",
        "Готов подать в суд", 
-       "Готов на самые решительные действия (вплоть до силовых)", 
+       ["Готов на самые решительные действия", "(вплоть до силовых)"], 
        "Затрудняюсь ответить"],
     datasets: [
       {
@@ -28,9 +28,9 @@ var chart = new Chart(ctx, {
     title: {
       display: true,
       position: "top",
-      fontSize: 14,
+      fontSize: 16,
       text:
-        "На какие действия Вы готовы для защиты своих интересов и политических взглядов? (% респондентов)", 
+        ["На какие действия Вы готовы для защиты своих интересов", "и политических взглядов? (% респондентов)"], 
     },
     legend: {
       display: false,

@@ -1,5 +1,5 @@
 Chart.defaults.global.defaultFontColor = 'black';
-Chart.defaults.global.defaultFontSize = 15;
+Chart.defaults.global.defaultFontSize = 16;
 var ctx = document.getElementById("myChart3").getContext("2d");
 var chart = new Chart(ctx, {
   type: "horizontalBar",
@@ -26,7 +26,7 @@ var chart = new Chart(ctx, {
       position: "top",
       fontSize: 14,
       text:
-        "Среди Ваших сокурсников есть те,\nкто принимал участие в протестных акциях? (число респондентов)"
+        ["Среди Ваших сокурсников есть те,", "кто принимал участие в протестных акциях? (число респондентов)"]
     }
   }
 });
