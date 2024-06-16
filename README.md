@@ -1,1 +1,0 @@
-# konplatonov.github.io
